@@ -1,9 +1,16 @@
 import ConnectedSocials from "../connected-socials/connected-socials";
 import icon from "../../assets/icon/icon-AI.png";
+import { motion } from "framer-motion";
 
 const PostEditor = () => {
   return (
-    <div className="min-h-screen bg-[#0D0D0D] p-8">
+    <motion.div
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -50 }}
+      transition={{ duration: 0.3 }}
+      className="min-h-screen bg-[#0D0D0D] p-8"
+    >
       <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_320px] gap-8">
         <div className="bg-[#151515] rounded-3xl p-8">
           <h1 className="text-3xl text-white font-bold">Create Post</h1>
@@ -41,7 +48,7 @@ Example:
         </div>
         <ConnectedSocials />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
