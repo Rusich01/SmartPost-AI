@@ -1,10 +1,17 @@
 import { useUiStore } from "../../storage/store-ui/use-ui-store";
+import { motion } from "framer-motion";
 
 const Login = () => {
-  const { switchRegister } = useUiStore();
+  const { switchRegister, openEditor } = useUiStore();
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] flex items-center justify-center p-6">
+    <motion.div
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -50 }}
+      transition={{ duration: 0.3 }}
+      className="min-h-screen bg-[#0D0D0D] flex items-center justify-center p-6"
+    >
       <div className=" w-full max-w-md bg-[#151515] rounded-3xl p-8">
         <h1 className="text-3xl text-white font-bold mb-2">SocialCopilot</h1>
 
@@ -32,7 +39,10 @@ const Login = () => {
           </div>
         </div>
 
-        <button className=" w-full mt-8 p-4 rounded-2xl bg-green-500 text-black font-semibold cursor-pointer active:scale-95 duration-75">
+        <button
+          className=" w-full mt-8 p-4 rounded-2xl bg-green-500 text-black font-semibold cursor-pointer active:scale-95 duration-75"
+          onClick={openEditor}
+        >
           Login
         </button>
 
@@ -46,7 +56,7 @@ const Login = () => {
           </button>
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
