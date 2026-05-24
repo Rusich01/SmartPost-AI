@@ -1,0 +1,48 @@
+import ConnectedSocials from "../connected-socials/connected-socials";
+import icon from "../../assets/icon/icon-AI.png";
+
+const PostEditor = () => {
+  return (
+    <div className="min-h-screen bg-[#0D0D0D] p-8">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_320px] gap-8">
+        <div className="bg-[#151515] rounded-3xl p-8">
+          <h1 className="text-3xl text-white font-bold">Create Post</h1>
+
+          <p className="text-zinc-400 mt-2 mb-">
+            Write your content and improve it with AI
+          </p>
+
+          <div className="relative">
+            <textarea
+              placeholder="
+Write your post...
+
+Example:
+🚀 New feature released today...
+            "
+              className="w-full h-80 bg-[#222] rounded-3xl p-6 text-white resize-none outline-none"
+            />
+            <img
+              src={icon}
+              alt=""
+              className="w-24 h-24 absolute bottom-0 right-0"
+            />
+          </div>
+
+          <div className="flex gap-4 mt-6">
+            <button className="px-6 py-4 rounded-2xl bg-green-500 text-black font-semibold cursor-pointer active:scale-95 duration-75">
+              Improve with AI
+            </button>
+
+            <button className="px-6 py-4 rounded-2xl bg-white text-black font-semibold cursor-pointer active:scale-95 duration-75">
+              Publish
+            </button>
+          </div>
+        </div>
+        <ConnectedSocials />
+      </div>
+    </div>
+  );
+};
+
+export default PostEditor;
