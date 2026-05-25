@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
 html {
-  background-color: #151515;
+  background-color: var(--main-bg);
+}
+
+:root {
+  --white: white;
+  --black: black;
+
+  --main-bg: #151515;
+  --bg-wrap: #0d0d0d;
+
+  /* butoon  */
+  --btn-bg-black: #222;
+  --btn-bg-green: oklab(72.887% -0.17941 0.1128);
+
+  /* text */
+  --text-zinc: oklch(87.1% 0.006 286.286);
+
+  /* icon */
+  --greenIcon: oklch(52.948% 0.15035 148.766);
+  --greenIconHover: oklch(63.199% 0.18596 147.388);
 }
