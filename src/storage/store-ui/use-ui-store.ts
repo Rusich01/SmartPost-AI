@@ -6,6 +6,10 @@ interface UiStore {
   authType: AuthType;
   isOpenEditor: boolean;
 
+  isShowPassword: boolean;
+  isShowRegisterPassword: boolean;
+  isShowPasswordConfirm: boolean;
+
   instagram: boolean;
   linkedIn: boolean;
   twitter: boolean;
@@ -22,11 +26,20 @@ interface UiStore {
 
   openEditor: VoidFunction;
   closeEditor: VoidFunction;
+
+  changeLoginPassword: VoidFunction;
+  changeRegisterPassword: VoidFunction;
+  changePasswordConfirm: VoidFunction;
 }
 
 export const useUiStore = create<UiStore>((set) => ({
   authType: "signin",
   isOpenEditor: false,
+
+  isShowPassword: false,
+  isShowRegisterPassword: false,
+  isShowPasswordConfirm: false,
+
   instagram: false,
   linkedIn: false,
   twitter: false,
@@ -43,4 +56,13 @@ export const useUiStore = create<UiStore>((set) => ({
   changeLinkedIn: () => set((state) => ({ linkedIn: !state.linkedIn })),
   changeTwitter: () => set((state) => ({ twitter: !state.twitter })),
   changeFacebook: () => set((state) => ({ facebook: !state.facebook })),
+
+  changeLoginPassword: () =>
+    set((state) => ({ isShowPassword: !state.isShowPassword })),
+
+  changeRegisterPassword: () =>
+    set((state) => ({ isShowRegisterPassword: !state.isShowRegisterPassword })),
+
+  changePasswordConfirm: () =>
+    set((state) => ({ isShowPasswordConfirm: !state.isShowPasswordConfirm })),
 }));
