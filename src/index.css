@@ -1,24 +1,26 @@
 @import "tailwindcss";
 
 html {
-  background-color: var(--main-bg);
+  background-color: var(--bg-wrap);
 }
 
 :root {
-  --white: white;
-  --black: black;
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
 
-  --main-bg: #151515;
-  --bg-wrap: #0d0d0d;
+  --main-bg: rgb(21, 21, 21);
+  --bg-wrap: rgb(13, 13, 13);
 
-  /* butoon  */
-  --btn-bg-black: #222;
-  --btn-bg-green: oklab(72.887% -0.17941 0.1128);
+  /* button  */
+  --btn-bg-black: rgb(34, 34, 34);
+  --btn-bg-green: rgb(0, 201, 80);
 
   /* text */
-  --text-zinc: oklch(87.1% 0.006 286.286);
+  --text-zinc: rgb(212, 212, 216);
+  --text-error: rgb(231, 0, 11);
 
   /* icon */
-  --greenIcon: oklch(52.948% 0.15035 148.766);
-  --greenIconHover: oklch(63.199% 0.18596 147.388);
+
+  --greenIcon: rgb(0, 130, 53);
+  --greenIconHover: rgb(0, 166, 62);
 }

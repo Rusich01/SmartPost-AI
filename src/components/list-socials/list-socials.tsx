@@ -3,6 +3,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaXTwitter,
+  FaEye,
 } from "react-icons/fa6";
 import { useUiStore } from "../../storage/store-ui/use-ui-store";
 import { motion } from "framer-motion";
